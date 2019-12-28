@@ -1,34 +1,17 @@
-async function mineAway() {
+import { rollManySidedDie } from './wasm_miner'
+import { rollLessDie } from './js_miner'
+
+const mineAway = async () => {
   const WASMResult = {} 
   WASMResult.title = 'WASM cryptomining Speed'
-  // WASMResult.data = await fetchWASM()
+  // WASMResult.data = await rollManySidedDie()
 
   const JSResult = {}
   JSResult.title = 'JS cryptomining Speed'
-  // JSResult.data = await benchmarkJS()
+  // JSResult.data = await rollLessDie()
 
   addResultToDisplay(WASMResult)
   addResultToDisplay(JSResult)
-}
-
-// DEMO: Complete this method
-async function fetchWASM() {
-  console.log('Fetching WASM...')
-  await WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-    .then(results => {
-      console.log(results)
-    }); 
-}
-
-// TODO: Complete this method
-async function benchmarkJS() {
-  // Start a counter for number of SHA256 run. 
-  let counter = 0
-
-  // Compute SHA256 over and over again for 30 seconds
-
-  // Return counter
-  return counter
 }
 
 function addResultToDisplay(result) {
@@ -45,4 +28,4 @@ function addResultToDisplay(result) {
   document.getElementById('results-list').appendChild(newRes)
 }
 
-mineAway()
+export { mineAway }

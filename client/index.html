@@ -6,7 +6,9 @@
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <title>WASM DEMONSTRATION</title>
   <link rel=preload href=main.css as=style>
+  <link rel=modulepreload href=bootstrap.js as=script>
   <link rel=modulepreload href=miner.js as=script>
+  <link rel=modulepreload href=wasm_miner.js as=script>
   <link rel=stylesheet href=main.css>
 </head>
 <body>
@@ -14,7 +16,9 @@
   <h4>Humans love to gamble</h4>
   <h2>Hello, class!</h2>
   <div id="results-list"></div>
-  <!-- DEMO: Add bootstrap.js -->
+  <!-- DEMO: Write in bootstrap.js -->
+  <script src=wasm_miner.js type=module></script>
+  <script src=bootstrap.js type=module></script>
   <script src=miner.js type=module></script>
 </body>
 </html>

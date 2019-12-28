@@ -14,6 +14,12 @@ extern {
 }
 
 #[wasm_bindgen]
-pub fn greet() {
+pub fn greet(audience: &str) {
+    alert(&format!("Hello, {}", audience));
+}
+
+// TODO: SHA256 here
+#[wasm_bindgen]
+pub fn rollManySidedDice() {
     alert("Hello, wasm-miner!");
 }
