@@ -21,5 +21,7 @@ pub fn greet(audience: &str) {
 // TODO: SHA256 here
 #[wasm_bindgen]
 pub fn rollManySidedDice() {
-    alert("Hello, wasm-miner!");
+    let mut counter = 0;
+
+    counter
 }

@@ -7,8 +7,9 @@
   <title>WASM DEMONSTRATION</title>
   <link rel=preload href=main.css as=style>
   <link rel=modulepreload href=bootstrap.js as=script>
-  <link rel=modulepreload href=miner.js as=script>
   <link rel=modulepreload href=wasm_miner.js as=script>
+  <link rel=modulepreload href=js_miner.js as=script>
+  <link rel=modulepreload href=relay-tests.js as=script>
   <link rel=stylesheet href=main.css>
 </head>
 <body>
@@ -18,7 +19,8 @@
   <div id="results-list"></div>
   <!-- DEMO: Write in bootstrap.js -->
   <script src=wasm_miner.js type=module></script>
+  <script src=js_miner.js type=module></script>
   <script src=bootstrap.js type=module></script>
-  <script src=miner.js type=module></script>
+  <script src=relay-tests.js type=module></script>
 </body>
 </html>
