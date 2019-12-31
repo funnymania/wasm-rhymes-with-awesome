@@ -4,11 +4,11 @@ import { rollLessDie } from './js_miner.js'
 const mineAway = async () => {
   const WASMResult = {} 
   WASMResult.title = 'WASM cryptomining Speed'
-  // WASMResult.data = await rollManySidedDie()
+  WASMResult.data = await roll_many_side_die()
 
   const JSResult = {}
   JSResult.title = 'JS cryptomining Speed'
-  // JSResult.data = await rollLessDie()
+  JSResult.data = await rollLessDie()
 
   addResultToDisplay(WASMResult)
   addResultToDisplay(JSResult)
@@ -21,7 +21,7 @@ function addResultToDisplay(result) {
   let newRes = document.createElement('div')
   newRes.classList.add('results-row')
 
-  let newResText = document.createTextNode(`${result.title}: ${result.data}`)
+  let newResText = document.createTextNode(`${result.title}: ${result.data / 1000} seconds`)
   newRes.appendChild(newResText)
 
   // Add to results-lists

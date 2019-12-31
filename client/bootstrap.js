@@ -20,9 +20,9 @@ async function run() {
   const audience = 'Code Fellows'
 
   // And afterwards we can use all the functionality defined in wasm.
-  greet(audience)
+  // greet(audience)
 
-  // mineAway()
+  mineAway()
 }
 
 run()
