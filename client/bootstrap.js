@@ -1,5 +1,5 @@
-import init, { greet } from './wasm_miner'
-import mineAway from './relay-tests'
+import init, { greet } from './wasm_miner.js'
+import mineAway from './relay-tests.js'
 
 async function run() {
   // First up we need to actually load the wasm file, so we use the

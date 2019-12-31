@@ -20,8 +20,8 @@ pub fn greet(audience: &str) {
 
 // TODO: SHA256 here
 #[wasm_bindgen]
-pub fn rollManySidedDice() {
-    let mut counter = 0;
+pub fn roll_many_sided_die() {
+//     let mut counter = 0;
 
-    counter
+//     counter
 }

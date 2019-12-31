@@ -1,9 +1,10 @@
 // TODO: Finish this benchmark
-const rollLessDie = async () => {
+const rollLessDie = async (target, nonce, blockHeader) => {
   // Start a counter for number of SHA256 run. 
   let counter = 0
 
   // Compute SHA256 over and over again for 30 seconds
+
 
   // Return counter
   return counter

@@ -1,5 +1,5 @@
-import { rollManySidedDie } from './wasm_miner'
-import { rollLessDie } from './js_miner'
+import { roll_many_sided_die } from './wasm_miner.js'
+import { rollLessDie } from './js_miner.js'
 
 const mineAway = async () => {
   const WASMResult = {} 
@@ -28,4 +28,4 @@ function addResultToDisplay(result) {
   document.getElementById('results-list').appendChild(newRes)
 }
 
-export { mineAway }
+export default mineAway
