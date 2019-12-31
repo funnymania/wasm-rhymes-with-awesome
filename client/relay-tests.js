@@ -4,15 +4,16 @@ import { rollLessDie } from './js_miner.js'
 const mineAway = async () => {
   const WASMResult = {} 
   WASMResult.title = 'WASM cryptomining Speed'
-  // WASMResult.data = await roll_many_side_die()
+  const startWASM = new Date
+  await roll_many_sided_die()
+  WASMResult.data = new Date - startWASM
+  addResultToDisplay(WASMResult)
 
   const JSResult = {}
   JSResult.title = 'JS cryptomining Speed'
-  const start = new Date
+  const startJS = new Date
   await rollLessDie()
-  JSResult.data = new Date - start
-
-  addResultToDisplay(WASMResult)
+  JSResult.data = new Date - startJS
   addResultToDisplay(JSResult)
 }
 
